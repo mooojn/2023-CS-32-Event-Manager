@@ -1,12 +1,9 @@
 # Event Management Application
 
-This README embeds the working app screenshots from `SCREENSHOTS.pdf`. If your
-viewer does not render the PDF inline, open the file directly.
+Working app screenshots:
 
-<details>
-<summary>View Screenshots (PDF)</summary>
-
-<object data="SCREENSHOTS.pdf" type="application/pdf" width="100%" height="900px">
-  <embed src="SCREENSHOTS.pdf" type="application/pdf" width="100%" height="900px" />
-</object>
-</details>
+![Splash Screen](working-ss/splash.jpeg)
+![Main Screen](working-ss/main.jpeg)
+![Conference Screen](working-ss/conf.jpeg)
+![Form Screen](working-ss/form.jpeg)
+![Form Screen 2](working-ss/form2.jpeg)
