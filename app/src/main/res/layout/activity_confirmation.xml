@@ -16,7 +16,7 @@
             android:text="Registration Confirmation"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/primary"
             android:layout_marginBottom="20dp" />
 
         <ImageView
