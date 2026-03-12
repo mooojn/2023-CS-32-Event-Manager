@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Smart Event Manager"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        android:gravity="center"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage and register for events seamlessly. Browse upcoming events, submit your registrations, and stay connected with the latest happenings."
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="4dp" />
+
+    <ImageView
+        android:id="@+id/ivEventBanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/event_banner"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Event Banner" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register for Event"
+        android:layout_marginTop="32dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp" />
+
+</LinearLayout>
