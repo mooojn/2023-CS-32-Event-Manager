@@ -2,8 +2,8 @@
 
 Working app screenshots:
 
-![Splash Screen](working-ss/splash.jpeg)
-![Main Screen](working-ss/main.jpeg)
-![Conference Screen](working-ss/conf.jpeg)
-![Form Screen](working-ss/form.jpeg)
-![Form Screen 2](working-ss/form2.jpeg)
+<img src="working-ss/splash.jpeg" alt="Splash Screen" width="320" />
+<img src="working-ss/main.jpeg" alt="Main Screen" width="320" />
+<img src="working-ss/conf.jpeg" alt="Conference Screen" width="320" />
+<img src="working-ss/form.jpeg" alt="Form Screen" width="320" />
+<img src="working-ss/form2.jpeg" alt="Form Screen 2" width="320" />
