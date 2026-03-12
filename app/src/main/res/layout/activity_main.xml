@@ -1,46 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:padding="24dp">
+    android:background="@color/background_light"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Smart Event Manager"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/purple_700"
-        android:gravity="center"
-        android:layout_marginTop="24dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Manage and register for events seamlessly. Browse upcoming events, submit your registrations, and stay connected with the latest happenings."
-        android:textSize="15sp"
-        android:gravity="center"
-        android:layout_marginTop="16dp"
-        android:lineSpacingExtra="4dp" />
-
-    <ImageView
-        android:id="@+id/ivEventBanner"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/event_banner"
-        android:scaleType="centerCrop"
-        android:layout_marginTop="24dp"
-        android:contentDescription="Event Banner" />
-
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register for Event"
-        android:layout_marginTop="32dp"
-        android:paddingStart="32dp"
-        android:paddingEnd="32dp" />
+        android:orientation="vertical">
 
-</LinearLayout>
+        <!-- Top Banner -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/event_banner">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\uD83C\uDF89"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Smart Event Manager"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your one-stop event companion"
+                    android:textSize="14sp"
+                    android:textColor="#D0E8F2"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- Content Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome!"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manage and register for events seamlessly. Browse upcoming events, submit your registrations, and stay connected with the latest happenings."
+                android:textSize="15sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- Feature highlights -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/card_background"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u2022  Seminars, Workshops &amp; Conferences"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u2022  Quick &amp; easy registration"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u2022  Webinars &amp; Cultural Events"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_primary" />
+
+            </LinearLayout>
+
+            <!-- Register Button -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Register for Event"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/accent"
+                android:layout_marginTop="28dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
