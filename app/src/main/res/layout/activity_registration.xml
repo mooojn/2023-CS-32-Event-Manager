@@ -2,181 +2,262 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_light"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Event Registration"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:layout_marginBottom="20dp" />
-
-        <!-- Full Name -->
-        <EditText
-            android:id="@+id/etFullName"
+        <!-- Header -->
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Full Name"
-            android:inputType="textPersonName"
-            android:layout_marginBottom="12dp"
-            android:autofillHints="name" />
+            android:layout_height="100dp"
+            android:background="@drawable/event_banner">
 
-        <!-- Phone Number -->
-        <EditText
-            android:id="@+id/etPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Phone Number"
-            android:inputType="phone"
-            android:layout_marginBottom="12dp"
-            android:autofillHints="phone" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Registration"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp" />
 
-        <!-- Email Address -->
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email Address"
-            android:inputType="textEmailAddress"
-            android:layout_marginBottom="12dp"
-            android:autofillHints="emailAddress" />
+        </RelativeLayout>
 
-        <!-- Event Type Spinner -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Event Type"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="4dp" />
-
-        <Spinner
-            android:id="@+id/spinnerEventType"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="12dp"
-            android:background="@android:drawable/btn_dropdown" />
-
-        <!-- Select Date -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Event Date"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="4dp" />
-
+        <!-- Form Card -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="12dp">
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <Button
-                android:id="@+id/btnSelectDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Select Date" />
-
+            <!-- Full Name -->
             <TextView
-                android:id="@+id/tvSelectedDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No date selected"
-                android:textSize="15sp"
-                android:layout_marginStart="12dp" />
+                android:text="Full Name"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your full name"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/divider"
+                android:background="@drawable/card_background"
+                android:padding="14dp"
+                android:layout_marginBottom="14dp"
+                android:autofillHints="name" />
+
+            <!-- Phone Number -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your phone number"
+                android:inputType="phone"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/divider"
+                android:background="@drawable/card_background"
+                android:padding="14dp"
+                android:layout_marginBottom="14dp"
+                android:autofillHints="phone" />
+
+            <!-- Email Address -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your email address"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/divider"
+                android:background="@drawable/card_background"
+                android:padding="14dp"
+                android:layout_marginBottom="14dp"
+                android:autofillHints="emailAddress" />
+
+            <!-- Event Type Spinner -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Type"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEventType"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/card_background"
+                android:padding="10dp"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Select Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Date"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/card_background"
+                android:padding="8dp"
+                android:layout_marginBottom="14dp">
+
+                <Button
+                    android:id="@+id/btnSelectDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Select Date"
+                    android:textSize="13sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/tvSelectedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No date selected"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginStart="12dp" />
+
+            </LinearLayout>
+
+            <!-- Gender -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="4dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/card_background"
+                android:padding="12dp"
+                android:layout_marginBottom="14dp">
+
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginEnd="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginEnd="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rbOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:textColor="@color/text_primary" />
+
+            </RadioGroup>
+
+            <!-- Choose Image -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile Image"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:layout_marginBottom="14dp">
+
+                <ImageView
+                    android:id="@+id/ivSelectedImage"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/background_light"
+                    android:contentDescription="Selected Image" />
+
+                <Button
+                    android:id="@+id/btnChooseImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Choose Image"
+                    android:textSize="13sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/primary"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+            <!-- Terms and Conditions -->
+            <CheckBox
+                android:id="@+id/cbTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accept Terms and Conditions"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Submit Registration"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/accent"
+                android:layout_marginBottom="24dp" />
 
         </LinearLayout>
-
-        <!-- Gender -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gender"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="4dp" />
-
-        <RadioGroup
-            android:id="@+id/radioGroupGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="12dp">
-
-            <RadioButton
-                android:id="@+id/rbMale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Male"
-                android:layout_marginEnd="16dp" />
-
-            <RadioButton
-                android:id="@+id/rbFemale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Female"
-                android:layout_marginEnd="16dp" />
-
-            <RadioButton
-                android:id="@+id/rbOther"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Other" />
-
-        </RadioGroup>
-
-        <!-- Choose Image -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Profile Image"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="4dp" />
-
-        <ImageView
-            android:id="@+id/ivSelectedImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center_horizontal"
-            android:scaleType="centerCrop"
-            android:background="#E0E0E0"
-            android:layout_marginBottom="8dp"
-            android:contentDescription="Selected Image" />
-
-        <Button
-            android:id="@+id/btnChooseImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Choose Image"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp" />
-
-        <!-- Terms and Conditions -->
-        <CheckBox
-            android:id="@+id/cbTerms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Accept Terms and Conditions"
-            android:layout_marginBottom="20dp" />
-
-        <!-- Submit Button -->
-        <Button
-            android:id="@+id/btnSubmit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Submit Registration"
-            android:layout_marginBottom="24dp" />
 
     </LinearLayout>
 
